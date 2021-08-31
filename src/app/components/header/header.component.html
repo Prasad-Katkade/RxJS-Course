@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container">
+    <a class="navbar-brand" href="#">{{'header.item2'|translate}} & {{'header.item1'|translate}}</a>
+    <strong class="badge bg-primary" *ngIf="exclusive">Exclusive</strong>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="promice">{{'header.item1'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="observable">{{'header.item2'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.text-primary]="switchLang=='de'"  (click)="selectedLanguage('de')" routerLink="de/{{pagename}}" >DE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  [class.text-primary]="switchLang=='en'"   (click)="selectedLanguage('en')" routerLink={{pagename}}>EN</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link text-success">{{'header.text'|translate}}</a>
+        </li> -->
+    
+      </ul>
+    </div>
+</div>
+  </nav>
+
+

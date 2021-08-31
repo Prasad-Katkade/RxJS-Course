@@ -1,0 +1,41 @@
+<div class="my-3">
+    <h2>Pluck</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Eg-01</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Pluck </strong> by property
+            </p>
+            <table>
+                <tr><th>Name</th></tr>
+                <tr *ngFor="let item of data">
+                    <td>{{item}}</td>
+                </tr>
+            </table>     
+        </div>
+        <div class="col-md-4">
+            <strong>Eg-02</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Pluck </strong>By Nested Property
+            </p>
+            <table>
+                <tr><th>Item type(desc > type)</th></tr>
+                <tr *ngFor="let item of data3">
+                    <td>{{item}}</td>
+                </tr>
+            </table> 
+          
+        </div>
+        <div class="col-md-4">
+            <strong>Eg-03</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Map</strong> Map Object Data
+            </p>
+            <br>
+         
+        </div>
+    </div>
+</div>

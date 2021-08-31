@@ -1,0 +1,56 @@
+<div class="my-3">
+    <h2>Reply Subject</h2>
+    <div class="row">
+        <div class="col">
+            <h3>{{methodInterval ? 'Interval Started' : 'Add Item'}}</h3>
+        </div>
+        <div   class="col text-right">
+            <Button class="btn btn-warning" (click)="toggleMethod()">Toggle Method</Button>
+        </div>
+    </div>
+    <hr>
+    <div class="row" *ngIf="!methodInterval">
+        <div class="col-md-4">
+            <input type="text" class="form-control" #iteminput>
+        </div>
+        <div class="col-md-3">
+          <Button class="btn btn-success" (click)="onVideoAdd(iteminput)">Add Item</Button>
+        </div>
+       
+    </div>
+    <hr *ngIf="!methodInterval">
+
+    <div class="row">
+        <div class="col-md-4">
+            <strong>List 1</strong>
+            <hr>
+            <ul class="item-list">
+                <li *ngFor="let item of itemlist1">
+                    <strong>Name : </strong> {{item}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>List 2</strong>
+            <hr>
+            <ul class="item-list">
+                <li *ngFor="let item of itemlist2">
+                    <strong>Name : </strong> {{item}}
+                </li>
+            </ul>
+            <button [ngClass]="submode2 ? 'btn-danger' : 'btn-success'" 
+            class="btn" (click)="list2subscribe()">{{submode2 ? 'Unsubscribe' : 'Subscribe'}}</button>
+        </div>
+        <div class="col-md-4">
+            <strong>List 3</strong>
+            <hr>
+            <ul class="item-list">
+                <li *ngFor="let item of itemlist3">
+                    <strong>Name : </strong> {{item}}
+                </li>
+            </ul>
+            <button [ngClass]="submode3 ? 'btn-danger' : 'btn-success'" 
+            class="btn" (click)="list3subscribe()">{{submode3 ? 'Unsubscribe' : 'Subscribe'}}</button>
+        </div>
+    </div>
+</div>

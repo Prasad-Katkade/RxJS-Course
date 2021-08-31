@@ -1,0 +1,54 @@
+<div class="my-3">
+    <h2>CatchError & ThrowError</h2>
+    <br />
+    <div
+      *ngIf="showerr"
+      class="alert alert-danger alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Error :</strong>  {{ error }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  
+    <div class="row my-3">
+      <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error : </strong>{{ error }}
+        <button
+          class="btn btn-primary my-5"
+          type="button"
+          data-dismiss="alert"
+          aria-label="close"
+        >
+          <span area-hidden="true">&times; </span>
+          Get Products
+        </button>
+      </div> -->
+      <div class="col-md-12">
+        <strong>Products : <span class="text-primary">Laptop</span></strong>
+        <br />
+        <button class="btn btn-primary my-5" (click)="onGetProducts()">
+          Get Products
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="posts">
+        <div class="card" *ngFor="let item of allProducts" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://placeimg.com/286/180/tech/4"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">
+              {{ item.body }}
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

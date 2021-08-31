@@ -1,0 +1,13 @@
+ul.item-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    ul.item-list li{
+        background: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    

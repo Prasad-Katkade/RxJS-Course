@@ -1,0 +1,20 @@
+<div class="my-3">
+    <h2>Exhaust Map</h2>
+
+    <h5>Save Data</h5>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <Button class="btn btn-success" #btn>Save Data</Button>
+        </div>
+        <div class="col-md-6">
+            <div *ngIf="fetching">
+                <div  class="spinner-border" role="status">
+                </div>
+                <span class="sr-only m-3">Saving Data...</span>
+            </div>
+         
+            <h6 class="bg-light py-2 px-3 border rounded">Save Request : {{data}}</h6>
+        </div>
+    </div>
+</div>
